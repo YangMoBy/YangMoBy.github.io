@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://YangMoBy.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-03-03T17:15:38.039Z</updated>
+    <title>Histone&apos;s OI</title>
+    <updated>2020-03-03T17:21:23.574Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://YangMoBy.github.io"/>
     <link rel="self" href="https://YangMoBy.github.io/atom.xml"/>
-    <subtitle>Max</subtitle>
+    <subtitle>你将不再是工具，而是人如其名的人</subtitle>
     <logo>https://YangMoBy.github.io/images/avatar.png</logo>
     <icon>https://YangMoBy.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, Histone&apos;s OI</rights>
     <entry>
         <title type="html"><![CDATA[博客01(测试)]]></title>
         <id>https://YangMoBy.github.io/post/bo-ke-01ce-shi/</id>
