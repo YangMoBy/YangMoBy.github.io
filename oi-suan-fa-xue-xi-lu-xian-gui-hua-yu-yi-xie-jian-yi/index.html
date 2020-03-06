@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Histone">
+<meta name="description" content="你将不再是工具，而是人如其名的人">
+<meta name="theme-color" content="#000">
+<title>【OI】算法学习路线规划与一些建议 | Histone&#39;s OI</title>
+<link rel="shortcut icon" href="https://YangMoBy.github.io/favicon.ico?v=1583502129286">
+<link rel="stylesheet" href="https://YangMoBy.github.io/styles/main.css">
+
+<link rel="stylesheet" href="/media/css/pisces.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/github.css" rel="stylesheet">  
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+    <meta name="description" content="【OI】算法学习路线规划与一些建议" />
+    <meta name="keywords" content="算法学习" />
+  </head>
+  <body>
+    <div class="head-top-line"></div>
+    <div class="header-box">
+      
+<div class=" pisces">
+  <header class="header bg-color ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Histone&#39;s OI</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">你将不再是工具，而是人如其名的人</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+          <li class="nav-item">
+            <a>
+              <i class="fa fa-search"></i> 搜索
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
+      
+      <div class="section-layout pisces ">
+        <div class="section-layout-wrapper">
+          
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body pisces" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="https://YangMoBy.github.io/images/avatar.png"/>
+    <p class="site-author-name">Histone&#39;s OI</p>
+    <p class="site-description right-motion">YangMo的个人博客~欢迎浏览</p>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">2</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">2</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">2</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://YangMoBy.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+        
+          
+            <a class="social-img" href="#">
+              <img src="\media\images\custom-array-imgSocials-1583286883837-socialImg.jpg" />
+              <i class="fa fa-qq"></i> QQ
+            </a>
+          
+        
+      </div>
+    </div>
+  
+
+
+</div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言：</a></li>
+</ul>
+</li>
+<li><a href="#%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80"><strong>语言基础：</strong></a><br>
+*
+<ul>
+<li><a href="#%E8%BF%99%E9%87%8C%E6%8E%A8%E8%8D%90%E5%87%A0%E6%9C%AC%E4%B9%A6%E9%9D%9E%E5%B8%B8%E9%80%82%E5%90%88%E5%85%A5%E9%97%A8"><strong>这里推荐几本书，非常适合入门：</strong></a></li>
+</ul>
+</li>
+<li><a href="#%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8"><strong>算法入门：</strong></a>
+<ul>
+<li><a href="#%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E5%88%9D%E7%BA%A7%E9%98%B6%E6%AE%B5">算法入门初级阶段：</a>
+<ul>
+<li><a href="#1-%E9%AB%98%E7%B2%BE%E5%BA%A6%E8%BF%90%E7%AE%97-colorredtext%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE%E7%94%A8%E6%97%B62-4-%E5%B0%8F%E6%97%B6">1. 高精度运算  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：2-4 小时</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：2-4 小时}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">2-4 </span><span class="mord cjk_fallback" style="color:red;">小时</span></span></span></span></span></a></li>
+<li><a href="#2-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-colorredtext%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE%E7%94%A8%E6%97%B68-12-%E5%B0%8F%E6%97%B6">2. 排序算法  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：8-12 小时</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：8-12 小时}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">8-12 </span><span class="mord cjk_fallback" style="color:red;">小时</span></span></span></span></span></a></li>
+<li><a href="#3-%E9%80%92%E6%8E%A8-colorredtext%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE%E7%94%A8%E6%97%B66-8-%E5%B0%8F%E6%97%B6">3. 递推  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：6-8 小时</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：6-8 小时}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">6-8 </span><span class="mord cjk_fallback" style="color:red;">小时</span></span></span></span></span></a></li>
+<li><a href="#4-%E8%B4%AA%E5%BF%83-colorredtext%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE%E7%94%A8%E6%97%B612-15-%E5%B0%8F%E6%97%B6">4. 贪心  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：12-15 小时</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：12-15 小时}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">12-15 </span><span class="mord cjk_fallback" style="color:red;">小时</span></span></span></span></span></a></li>
+<li><a href="#5-%E6%90%9C%E7%B4%A2bfsdfs-colorredtext%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE%E7%94%A8%E6%97%B620-%E5%B0%8F%E6%97%B6%E8%B5%B7%E6%AD%A5">5. 搜索——BFS,DFS  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：20 小时起步</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：20 小时起步}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">20 </span><span class="mord cjk_fallback" style="color:red;">小时起步</span></span></span></span></span></a></li>
+<li><a href="#6-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-colorredtext%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE%E7%94%A8%E6%97%B620-%E5%B0%8F%E6%97%B6%E8%B5%B7%E6%AD%A5">6. 动态规划  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：20 小时起步</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：20 小时起步}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">20 </span><span class="mord cjk_fallback" style="color:red;">小时起步</span></span></span></span></span></a></li>
+</ul>
+</li>
+<li><a href="#%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E4%B8%AD%E7%BA%A7%E9%98%B6%E6%AE%B5">算法入门中级阶段：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+            </div>
+          
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://YangMoBy.github.io/oi-suan-fa-xue-xi-lu-xian-gui-hua-yu-yi-xie-jian-yi/">
+      【OI】算法学习路线规划与一些建议
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+      <span class="meta-item">
+        <i class="fa fa-thumb-tack"></i>
+        <span>置顶</span>
+        <span class="post-meta-divider">|</span>
+      </span>
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>Wednesday, March 4, 2020 10:24 AM</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+      <span class="meta-item">
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
+          
+            <a href="https://YangMoBy.github.io/yQymfalgR/">
+              <span>算法学习</span>
+            </a>
+          
+        
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>7分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1738<span class="pc-show">字数</span></span>
+    </span>
+    
+      <span id="/postundefined" class="meta-item pc-show leancloud_visitors">
+        <span class="post-meta-divider">|</span>
+        <i class="fa fa-eye"></i>
+        <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
+      </span>
+    
+  </div>
+</header>
+              <div class="post-body next-md-body" id="post_body">
+                <p><strong>从小白到掌握骚姿势的神犇</strong></p>
+<p><strong>合理的学习路线规划少不了</strong></p>
+<!-- more -->
+<h3 id="前言">前言：</h3>
+<p>鉴于我自身是一个 <strong>蒟蒻</strong> ，太菜了。</p>
+<p>只是分享下我个人的 <strong>一些想法</strong> ，神犇大大们见谅。</p>
+<p>这套学习路线 <strong>不一定</strong> 适合每个人，但是希望对大家有所参考和帮助</p>
+<hr>
+<h2 id="语言基础"><strong>语言基础：</strong></h2>
+<p>这块的内容其实不是很多。<s>如果已经有所了解的朋友可以跳到下一个内容！</s></p>
+<p>如果下定决心学习算法的话，这部分的内容建议 <strong>一周到两周</strong> 之内学会……</p>
+<p>大致流程：</p>
+<p><strong>粗读 1~2 天</strong><br>
+<strong>精读 6~15 天</strong></p>
+<p>重点掌握以下内容即可：</p>
+<ol>
+<li>变量与内存</li>
+<li>位运算</li>
+<li>条件判断+循环语句</li>
+<li>多维数组和字符串</li>
+<li>指针与函数</li>
+<li>基本的输入输出（IO流）</li>
+<li>简单的调试手段</li>
+<li></li>
+</ol>
+<h4 id="这里推荐几本书非常适合入门"><strong>这里推荐几本书，非常适合入门：</strong></h4>
+<ul>
+<li><strong>C程序设计语言(第二版)</strong></li>
+</ul>
+<blockquote>
+<p>书籍堪称经典，入门阶段适合反复阅读，但是对完全什么都不知道的小白来说不是很友好<br>
+内容量不是很大，阅读压力不大<br>
+推荐指数：★★★★★☆☆<br>
+<img src="https://s2.ax1x.com/2020/03/04/3oVjzT.jpg" width = "400" height = "400" div align=center /></p>
+</blockquote>
+<ul>
+<li><strong>C程序设计语言</strong></li>
+</ul>
+<blockquote>
+<p>笔者入门时的书籍，讲解非常详细，适合有一定基础的朋友<br>
+内容量较大，建议食用时搭配书中例题或OJ网站<br>
+推荐指数：★★★★★★☆<br>
+<img src="https://s2.ax1x.com/2020/03/04/3om3M8.jpg" width = "400" height = "400" div align=center /></p>
+</blockquote>
+<ul>
+<li><strong>啊哈C语言</strong></li>
+</ul>
+<blockquote>
+<p>小白入门首选，让你用最短的时间快速上手编程。<br>
+内容量较小，无阅读障碍<br>
+推荐指数：★★★★★☆☆<br>
+<img src="https://s2.ax1x.com/2020/03/04/3onBtA.jpg" width = "400" height = "400" div align=center /></p>
+</blockquote>
+<p>(当然大家也可以从网上找教程视频或者是参加培训，本人比较喜欢看书自学 <s>（一定不是因为我穷的）</s> )</p>
+<hr>
+<h2 id="算法入门"><strong>算法入门：</strong></h2>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>重头戏来了！！! </mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{重头戏来了！！! }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">重头戏来了！！</span><span class="mord" style="color:red;">! </span></span></span></span></span></p>
+<p>鉴于鄙人才疏学浅，以下内容仅作参考，如有错误请评论指正 （或者加鄙人QQ，二维码在主页右下角）</p>
+<p>在正式开始学习算法前，一定要找一个较好的OJ来作为平时练习的网站</p>
+<ul>
+<li>
+<p>如果是国内Oier的话，首推荐 <strong>洛谷</strong> ，界面优美，交互简便，题库丰富</p>
+</li>
+<li>
+<p>如果所在学校就有OJ的话，那……根据自身情况决定吧</p>
+</li>
+<li>
+<p>其他推荐：CodeForce、SPOJ、Uva、HDU、计蒜客、AtCoder……</p>
+</li>
+</ul>
+<p>这里只是入门所推荐的网站。</p>
+<h3 id="算法入门初级阶段">算法入门初级阶段：</h3>
+<p><s>（这里假设你的语言基础已经达标，并且有一定刷题量）</s></p>
+<h4 id="1-高精度运算-colorredtext入门建议用时2-4-小时">1. 高精度运算  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：2-4 小时</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：2-4 小时}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">2-4 </span><span class="mord cjk_fallback" style="color:red;">小时</span></span></span></span></span></h4>
+<blockquote>
+<p>由于算法竞赛不支持Python等等自带高精度的语言，所以我们要手写高精度运算<br>
+高精度加、减、乘、除、取模，压位高精，N进制高精</p>
+</blockquote>
+<h4 id="2-排序算法-colorredtext入门建议用时8-12-小时">2. 排序算法  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：8-12 小时</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：8-12 小时}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">8-12 </span><span class="mord cjk_fallback" style="color:red;">小时</span></span></span></span></span></h4>
+<blockquote>
+<p>排序算法可谓是学习算法入门的一道坎， <s>虽然C++的sort()很香</s><br>
+<strong>冒泡排序、选择排序、插入排序</strong>，这三个都是最基础的排序算法<br>
+<strong>快速排序、归并排序</strong>，这些是很重要的排序算法<br>
+<strong>堆排序、二叉树排序、希尔排序、桶排序</strong>，这些也是要了解到的<br>
+搞懂算法后很有必要去自己动手写一写<br>
+这时候开始要分析算法的<strong>时间复杂度、空间复杂度、稳定性</strong>、 <s>以及对数据的敏感程度</s></p>
+</blockquote>
+<h4 id="3-递推-colorredtext入门建议用时6-8-小时">3. 递推  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：6-8 小时</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：6-8 小时}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">6-8 </span><span class="mord cjk_fallback" style="color:red;">小时</span></span></span></span></span></h4>
+<blockquote>
+<p>其实严格来说，递推不像是算法，而更像是一种数学方法<br>
+要注意自身的数学基础，如果发现在这块进展不顺的话，就要去储备一些数学知识了<br>
+养兔子问题（经典递推问题）<br>
+Noip2002的过河卒就是一道递推题，还需要用到高精度</p>
+</blockquote>
+<h4 id="4-贪心-colorredtext入门建议用时12-15-小时">4. 贪心  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：12-15 小时</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：12-15 小时}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">12-15 </span><span class="mord cjk_fallback" style="color:red;">小时</span></span></span></span></span></h4>
+<blockquote>
+<p>贪心是一种解决问题的思想，我们往往只需考虑当下最好的情况<br>
+就是好比有一大堆美食，贪心的话肯定要全吃，并且还要从最大的开始吃<br>
+使用贪心的前提：局部最优情况可以推出全局最优情况<br>
+建议刷 10-15 道经典题目，更好掌握该思想</p>
+</blockquote>
+<h4 id="5-搜索bfsdfs-colorredtext入门建议用时20-小时起步">5. 搜索——BFS,DFS  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：20 小时起步</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：20 小时起步}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">20 </span><span class="mord cjk_fallback" style="color:red;">小时起步</span></span></span></span></span></h4>
+<blockquote>
+<p>搜索可谓是一众算法的基础啊， <s>也是打暴力的基础</s><br>
+神犇的暴力搜索甚至可以吊打标程std<br>
+重要是很重要，但是这也是一道坎<br>
+建议多练题，搜索的应用范围非常之广</p>
+</blockquote>
+<h4 id="6-动态规划-colorredtext入门建议用时20-小时起步">6. 动态规划  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>入门建议用时：20 小时起步</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{入门建议用时：20 小时起步}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">入门建议用时：</span><span class="mord" style="color:red;">20 </span><span class="mord cjk_fallback" style="color:red;">小时起步</span></span></span></span></span></h4>
+<blockquote>
+<p>动态规划是小白向大白进阶的最后一道坎<br>
+这里大体列举一下动态规划的类型<br>
+线性DP、区间DP、树形DP、背包DP、数位DP、期望DP、状压DP<br>
+动态规划这里内容非常多，使用也很灵活，<s>初学者可能会出现头大等生理反应</s></p>
+</blockquote>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mtext>这些是基础中的基础，这个阶段要深入理解算法的思想，并实现出来</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}\text{这些是基础中的基础，这个阶段要深入理解算法的思想，并实现出来}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">这些是基础中的基础，这个阶段要深入理解算法的思想，并实现出来</span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mtext>笔者只是整理了主要的框架，实际中每个算法涉及的东西很多</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}\text{笔者只是整理了主要的框架，实际中每个算法涉及的东西很多}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">笔者只是整理了主要的框架，实际中每个算法涉及的东西很多</span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mtext>笔者也不可能像出书一样将所有知识点都提一遍，好像出书也不大可能都提</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}\text{笔者也不可能像出书一样将所有知识点都提一遍，好像出书也不大可能都提}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">笔者也不可能像出书一样将所有知识点都提一遍，好像出书也不大可能都提</span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mtext>建议去看一些知识点讲解的优质博客，博客园，CSDN什么的</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}\text{建议去看一些知识点讲解的优质博客，博客园，CSDN什么的}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">建议去看一些知识点讲解的优质博客，博客园，</span><span class="mord" style="color:blue;">CSDN</span><span class="mord cjk_fallback" style="color:blue;">什么的</span></span></span></span></span></p>
+<h3 id="算法入门中级阶段">算法入门中级阶段：</h3>
+<p>（有待更新……）</p>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Histone&#39;s OI
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://YangMoBy.github.io/oi-suan-fa-xue-xi-lu-xian-gui-hua-yu-yi-xie-jian-yi/" title="【OI】算法学习路线规划与一些建议">【OI】算法学习路线规划与一些建议</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://YangMoBy.github.io/yQymfalgR/"># 算法学习</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="博客运维情况" href="https://YangMoBy.github.io/bo-ke-01ce-shi/">博客运维情况</a>
+        <a class="nav-mobile-next" title="博客运维情况" href="https://YangMoBy.github.io/bo-ke-01ce-shi/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+              
+                
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By HsxyHao
+    </div>
+    <div class="poweredby">
+      当世界吵吵闹闹，只有你自己才能听清内心的声音
+    </div>
+  </footer>
+  
+  
+  <div class="pisces back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+    <div class="bg-img">
+      <img src="\media\images\custom-bgImg.jpg" />
+    </div>
+  
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+</script>
+    </div>
+  </body>
+  <script src="/media/js/motion.js"></script>
+</html>
