@@ -6,7 +6,7 @@
 <meta name="keywords" content="Histone">
 <meta name="description" content="你将不再是工具，而是人如其名的人">
 <meta name="theme-color" content="#000">
-<title>博客运维情况 | Histone&#39;s OI</title>
+<title>【杂记】2020.03.08 | Histone&#39;s OI</title>
 <link rel="shortcut icon" href="https://YangMoBy.github.io/favicon.ico?v=1583678038886">
 <link rel="stylesheet" href="https://YangMoBy.github.io/styles/main.css">
 
@@ -25,8 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="博客运维情况" />
-    <meta name="keywords" content="测试内容" />
+    <meta name="description" content="【杂记】2020.03.08" />
+    <meta name="keywords" content="杂记" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -110,7 +110,8 @@
       <div class="sidebar-body pisces" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://YangMoBy.github.io/images/avatar.png"/>
@@ -166,6 +167,191 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%97%A9%E4%B8%8A-930">早上 9：30</a></li>
+<li><a href="#%E4%B8%8A%E5%8D%88-1030">上午 10：30</a>
+<ul>
+<li><a href="#%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E4%BF%AE%E6%94%B9%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C">树状数组修改插入操作</a></li>
+<li><a href="#%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%8C%BA%E9%97%B4%E6%B1%82%E5%92%8C%E4%BB%8Ex%E5%88%B01%E6%93%8D%E4%BD%9C">树状数组区间求和(从x到1)操作</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%AD%E5%8D%88-1320">中午 13：20</a></li>
+<li><a href="#%E4%B8%8B%E5%8D%88-1400">下午 14：00</a></li>
+<li><a href="#%E5%82%8D%E6%99%9A-1900">傍晚 19：00</a></li>
+<li><a href="#%E6%99%9A%E4%B8%8A-2200">晚上 22：00</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+            </div>
           
         
       </div>
@@ -253,8 +439,8 @@
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://YangMoBy.github.io/bo-ke-01ce-shi/">
-      博客运维情况
+    <a class="post-title-link" href="https://YangMoBy.github.io/za-ji-20200308/">
+      【杂记】2020.03.08
     </a>
   </h1>
   <div class="post-meta">
@@ -262,7 +448,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>Wednesday, March 4, 2020 12:55 AM</span>
+      <span>Sunday, March 8, 2020 9:56 PM</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -271,8 +457,8 @@
         <span class="pc-show">分类于</span>
         
           
-            <a href="https://YangMoBy.github.io/wBprF6phc/">
-              <span>测试内容</span>
+            <a href="https://YangMoBy.github.io/Ls2APi95n/">
+              <span>杂记</span>
             </a>
           
         
@@ -281,12 +467,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>4分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>116<span class="pc-show">字数</span></span>
+      <span>951<span class="pc-show">字数</span></span>
     </span>
     
       <span id="/postundefined" class="meta-item pc-show leancloud_visitors">
@@ -298,17 +484,110 @@
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="purple"><mtext>你将不再是工具，而是人如其名的人！</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{purple}\text{你将不再是工具，而是人如其名的人！}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:purple;"><span class="mord cjk_fallback" style="color:purple;">你将不再是工具，而是人如其名的人！</span></span></span></span></span></p>
+                <p>决定日更的第一天<br>
+点进来看看吧</p>
 <!-- more -->
-<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/3SdWFJ"><img src="https://s2.ax1x.com/2020/02/16/3SdWFJ.png" alt="3SdWFJ.png" loading="lazy"></a></figure>
+<h2 id="早上-930">早上 9：30</h2>
+<p>迷迷糊糊地吃了一碗方便面，又打开了电脑。<br>
+<strong>熟悉的洛谷，熟悉的DevCpp</strong><br>
+第一件事是，用民间数据把昨天NOI Online的代码测试了下<br>
+25+0+0<br>
+哇，心态瞬间<strong>爆炸</strong>……<br>
+<s>（第一题明明有50的啊，第二题怎么又爆0了，第三题意料之中）</s></p>
+<img src="https://s2.ax1x.com/2020/03/08/3zsCWt.jpg" width = "640" height = "400" div align=center />
+<p>还是要调整好自己的心态，毕竟自己是真的蒟蒻，短时间菜一点可以容忍，但绝不能容忍长时间的菜！！！</p>
 <hr>
-<ul>
-<li>2020.03.04 启用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mtext>NexT</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\text{NexT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord" style="color:red;">NexT</span></span></span></span></span> 主题</li>
-<li>预计下一步要添加看板娘或者是音乐外链</li>
-<li>具体配置还在更新</li>
-<li>2020.03.04 更新了第一篇博客，还有待完善</li>
-<li>考虑换下背景，不然加载太慢了</li>
-</ul>
+<h2 id="上午-1030">上午 10：30</h2>
+<p>今天距离<strong>省选</strong>还有——<strong>21</strong>天啊<br>
+调整好心态继续加油。。。</p>
+<p>学着学着，突然发现，树状数组给我整蒙圈了<br>
+以前就是<strong>会打板子</strong>，今天花了我好长时间总于搞懂<strong>其中的原理的lowbit操作</strong>是个什么鬼了！<br>
+众所周知，树状数组可以维护区间和<br>
+比如给我们一个 <strong>num[]</strong> 数组，长度为 <strong>n</strong>。<br>
+并且我们打算把它加到我们的树状数组 <strong>tree[]</strong> 中去<br>
+<strong>如下图</strong><br>
+<a href="https://imgchr.com/i/3zyxPA"><img src="https://s2.ax1x.com/2020/03/08/3zyxPA.png" alt="3zyxPA.png" loading="lazy"></a></p>
+<h3 id="树状数组修改插入操作">树状数组修改插入操作</h3>
+<pre><code class="language-cpp">void update(int x,int a){
+    //x是插入的位置
+    //a是要插入的值
+    while(x&lt;=n){
+        tree[x]+=a;
+        x += lowbit(x);
+        //也就是 x = x&amp;-x
+    }
+}
+</code></pre>
+<p><strong>假设 x = 1,n = 8,a = 5,则</strong></p>
+<p><strong>tree[1]+=5</strong><br>
+<strong>tree[2]+=5</strong><br>
+<strong>tree[4]+=5</strong><br>
+<strong>tree[8]+=5</strong></p>
+<p>lowbit()返回的其实就是x在二进制下，末尾 <strong>第一个遇到的1和在那之前的0</strong> 的情况，比如：</p>
+<p><strong>0001   1</strong>   lowbit(1) = 1<br>
+<strong>0010   2</strong>   lowbit(2) = 2<br>
+<strong>0011   3</strong>   lowbit(3) = 1<br>
+<strong>0100   4</strong>   lowbit(4) = 4<br>
+<strong>0101   5</strong>   lowbit(5) = 1<br>
+<strong>0110   6</strong>   lowbit(6) = 2<br>
+<strong>0111   7</strong>   lowbit(7) = 1<br>
+<strong>1000   8</strong>   lowbit(8) = 8</p>
+<p>给一个随便给一个数字 <strong>5201314‬</strong> <s>(不用怀疑准确性，我用计算器算的)</s><br>
+<strong>lowbit(5201314) = 2</strong><br>
+因为 <strong>5201314</strong>的二进制模样长这样：<strong>100 1111 0101 1101 1010 0010‬</strong><br>
+关心最后两位 100 1111 0101 1101 1010 00<strong>10‬</strong><br>
+就是二进制的 <strong>2</strong><br>
+至于具体的运算参考手边二进制运算课本，<s>没有？那百度啊</s></p>
+<h3 id="树状数组区间求和从x到1操作">树状数组区间求和(从x到1)操作</h3>
+<pre><code class="language-cpp">int sum(int x){
+    //x还是位置
+	int ans = 0;
+	while(x){
+		ans += treen[x];
+		x -= lowbit(x);
+	}
+	return ans;
+}
+</code></pre>
+<p><strong>什么，你要求和5到12区间内的和？？？</strong></p>
+<pre><code class="language-cpp">ans = sum(12) - sum(5-1);
+</code></pre>
+<p><s>很颓很颓的一上午，虽然我知道我可能上面没太讲清</s><br>
+<s>但是那又有什么关系呢，这只是一篇类似于 <strong>日记</strong> 的东东</s></p>
+<hr>
+<h2 id="中午-1320">中午 13：20</h2>
+<p>吃了一大盘鸡肉+两碗米饭 <s>(具体菜名叫不上来)</s><br>
+来了客人，家里把以前的旧车卖了，来的是买车的人<br>
+说实话，他们都认识我，我不认识他们，233333</p>
+<p>关上卧室门，逍遥自在</p>
+<hr>
+<h2 id="下午-1400">下午 14：00</h2>
+<p>刚准备打开游戏，看看沙雕可爱的 <strong>羽羽音小鸟(はばね ことり)</strong> 以及开朗温柔的 <strong>姫城扬羽(ひめぎ あげは)</strong></p>
+<p>突然想起来有洛谷月赛啊……淦！<br>
+(因为我太弱，所以只做了Div2)</p>
+<p><strong>T1</strong> 第一眼还以为是八皇后问题，但仔细一看……什么嘛，入门组水题<br>
+20分钟愉快切掉 <s>(中间边界条件搞错WA了两次)</s></p>
+<p><strong>T2</strong> 明显是道数学结论题，一开始写了个O(K)的算法上去<br>
+果不其然，TLE掉最后一组数据<br>
+思考了好久，推了下式子<br>
+*<em>((n+1)<em>pow(2,k))</em></em><br>
+鉴于k比较大，写个快速幂水过去了</p>
+<p><strong>T3</strong> 卡了 我两个小时<br>
+各种瞎搞算法都用过，好像是DP，但是也用前缀和搞过<br>
+最后DFS暴力14分，果断滚粗</p>
+<p><strong>T4</strong> 没看……</p>
+<hr>
+<h2 id="傍晚-1900">傍晚 19：00</h2>
+<p>打开了Steam，心不在焉地玩着<strong>If My Heart Had Wings</strong></p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.luogu.com.cn/upload/image_hosting/ivxjt9tg.png" alt="" loading="lazy"></figure>
+<p>无聊中解答了几个问题，推进了下剧情<br>
+记忆化搜索？(×)<br>
+瞎搞 (√)</p>
+<hr>
+<h2 id="晚上-2200">晚上 22：00</h2>
+<p>关掉了游戏，写下博客<br>
+决定当个日更博客主</p>
+<hr>
 
               </div>
               <div class="post-footer">
@@ -319,7 +598,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://YangMoBy.github.io/bo-ke-01ce-shi/" title="博客运维情况">博客运维情况</a>
+      <a href="https://YangMoBy.github.io/za-ji-20200308/" title="【杂记】2020.03.08">【杂记】2020.03.08</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -328,18 +607,18 @@
   </ul>
   <div class="tags">
     
-      <a href="https://YangMoBy.github.io/wBprF6phc/"># 测试内容</a>
+      <a href="https://YangMoBy.github.io/Ls2APi95n/"># 杂记</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="【OI】算法学习路线规划与一些建议" href="https://YangMoBy.github.io/oi-suan-fa-xue-xi-lu-xian-gui-hua-yu-yi-xie-jian-yi/">【OI】算法学习路线规划与一些建议</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="【OI】算法学习路线规划与一些建议" href="https://YangMoBy.github.io/oi-suan-fa-xue-xi-lu-xian-gui-hua-yu-yi-xie-jian-yi/">上一篇</a>
-      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="【OI】算法学习路线规划与一些建议" href="https://YangMoBy.github.io/oi-suan-fa-xue-xi-lu-xian-gui-hua-yu-yi-xie-jian-yi/">【OI】算法学习路线规划与一些建议</a>
+        <a class="nav-mobile-next" title="【OI】算法学习路线规划与一些建议" href="https://YangMoBy.github.io/oi-suan-fa-xue-xi-lu-xian-gui-hua-yu-yi-xie-jian-yi/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
