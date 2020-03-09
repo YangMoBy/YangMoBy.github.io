@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Histone">
+<meta name="description" content="你将不再是工具，而是人如其名的人">
+<meta name="theme-color" content="#000">
+<title>【杂记】2020.03.09 | Histone&#39;s OI</title>
+<link rel="shortcut icon" href="https://YangMoBy.github.io/favicon.ico?v=1583770664090">
+<link rel="stylesheet" href="https://YangMoBy.github.io/styles/main.css">
+
+<link rel="stylesheet" href="/media/css/pisces.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/github.css" rel="stylesheet">  
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+    <meta name="description" content="【杂记】2020.03.09" />
+    <meta name="keywords" content="杂记" />
+  </head>
+  <body>
+    <div class="head-top-line"></div>
+    <div class="header-box">
+      
+<div class=" pisces">
+  <header class="header bg-color ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Histone&#39;s OI</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">你将不再是工具，而是人如其名的人</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+          <li class="nav-item">
+            <a>
+              <i class="fa fa-search"></i> 搜索
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
+      
+      <div class="section-layout pisces ">
+        <div class="section-layout-wrapper">
+          
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body pisces" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="https://YangMoBy.github.io/images/avatar.png"/>
+    <p class="site-author-name">Histone&#39;s OI</p>
+    <p class="site-description right-motion">YangMo的个人博客~欢迎浏览</p>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">4</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://YangMoBy.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+        
+          
+            <a class="social-img" href="#">
+              <img src="\media\images\custom-array-imgSocials-1583286883837-socialImg.jpg" />
+              <i class="fa fa-qq"></i> QQ
+            </a>
+          
+        
+      </div>
+    </div>
+  
+
+
+</div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%8A%E5%8D%881030"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">上</mi><mi mathvariant="normal">午</mi><mn>10</mn><mo>:</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">上午10:30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">上</span><span class="mord cjk_fallback">午</span><span class="mord">1</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span></span></span></span></a>
+<ul>
+<li><a href="#%E5%AE%89%E5%88%A9%E4%B8%80%E6%AC%BE%E8%B6%85%E6%A3%92%E7%9A%84%E6%B8%B8%E6%88%8F%E5%9D%8E%E5%B7%B4%E6%8B%89%E7%9A%84%E5%A4%AA%E7%A9%BA%E8%AE%A1%E5%88%92">安利一款超棒的游戏《坎巴拉的太空计划》</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%AD%E5%8D%881230"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">中</mi><mi mathvariant="normal">午</mi><mn>12</mn><mi mathvariant="normal">：</mi><mn>30</mn></mrow><annotation encoding="application/x-tex">中午12：30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">午</span><span class="mord">1</span><span class="mord">2</span><span class="mord cjk_fallback">：</span><span class="mord">3</span><span class="mord">0</span></span></span></span></a></li>
+<li><a href="#%E4%B8%8B%E5%8D%881800"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">下</mi><mi mathvariant="normal">午</mi><mn>18</mn><mi mathvariant="normal">：</mi><mn>00</mn></mrow><annotation encoding="application/x-tex">下午18：00</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">下</span><span class="mord cjk_fallback">午</span><span class="mord">1</span><span class="mord">8</span><span class="mord cjk_fallback">：</span><span class="mord">0</span><span class="mord">0</span></span></span></span></a></li>
+<li><a href="#st%E8%A1%A8%E7%9A%84%E5%8E%9F%E7%90%86%E4%BB%A5%E5%8F%8A%E5%AE%9E%E7%8E%B0"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>T</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">原</mi><mi mathvariant="normal">理</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">及</mi><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi></mrow><annotation encoding="application/x-tex">ST表的原理以及实现</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">原</span><span class="mord cjk_fallback">理</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">及</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span></span></span></span></a>
+<ul>
+<li><a href="#%E5%88%9D%E5%A7%8B%E5%8C%96st%E8%A1%A8"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">初</mi><mi mathvariant="normal">始</mi><mi mathvariant="normal">化</mi><mi>S</mi><mi>T</mi><mi mathvariant="normal">表</mi></mrow><annotation encoding="application/x-tex">初始化ST表</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord cjk_fallback">初</span><span class="mord cjk_fallback">始</span><span class="mord cjk_fallback">化</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord cjk_fallback">表</span></span></span></span></a></li>
+<li><a href="#%E6%9F%A5%E8%AF%A2st%E8%A1%A8">查询ST表</a></li>
+</ul>
+</li>
+<li><a href="#%E6%99%9A%E4%B8%8A2230"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">晚</mi><mi mathvariant="normal">上</mi><mn>22</mn><mi mathvariant="normal">：</mi><mn>30</mn></mrow><annotation encoding="application/x-tex">晚上22：30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">晚</span><span class="mord cjk_fallback">上</span><span class="mord">2</span><span class="mord">2</span><span class="mord cjk_fallback">：</span><span class="mord">3</span><span class="mord">0</span></span></span></span></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+            </div>
+          
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://YangMoBy.github.io/za-ji-20200309/">
+      【杂记】2020.03.09
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>Monday, March 9, 2020 10:30 PM</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+      <span class="meta-item">
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
+          
+            <a href="https://YangMoBy.github.io/Ls2APi95n/">
+              <span>杂记</span>
+            </a>
+          
+        
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>8分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>2007<span class="pc-show">字数</span></span>
+    </span>
+    
+      <span id="/postundefined" class="meta-item pc-show leancloud_visitors">
+        <span class="post-meta-divider">|</span>
+        <i class="fa fa-eye"></i>
+        <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
+      </span>
+    
+  </div>
+</header>
+              <div class="post-body next-md-body" id="post_body">
+                <p>又是很颓的一天啊……<br>
+日常肝题，奇怪的是今天居然没有玩游戏</p>
+<!-- more -->
+<h2 id="上午1030"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">上</mi><mi mathvariant="normal">午</mi><mn>10</mn><mo>:</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">上午10:30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">上</span><span class="mord cjk_fallback">午</span><span class="mord">1</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">0</span></span></span></span></h2>
+<p>其实醒来有很长时间了<br>
+但是一直懒在床上没有动，看了会许胤龙的《组合数学引论》<br>
+<s>怎么可能看懂，这个东西简直需要两个脑子</s></p>
+<p>对<strong>Fibonacci数</strong>和<strong>Catalan数</strong>有了更深刻的认识。<br>
+但是还有些不太明白，明天再看看书吧……</p>
+<p>唉，当一个蒟蒻的快乐是大佬们永远体验不到的<br>
+新知识的海洋在向蒟蒻招手。<br>
+至于大佬呢？大佬们忙着发现新的类地星球，不屑于在地表游玩。</p>
+<h3 id="安利一款超棒的游戏坎巴拉的太空计划">安利一款超棒的游戏《坎巴拉的太空计划》</h3>
+<blockquote>
+<p>虽然我还不怎么会玩，勉强靠着新手教程发射了第一次火箭<br>
+但是游戏真的超棒，物理、航天、宇宙爱好者的最佳选择<br>
+这里贴一段游戏评论<br>
+<strong>本游戏百小时都出不了新手村<br>
+但是作为一个太空模拟它做到了尽可能的真实（相比其他游戏<br>
+没有什么超光速引擎，没有跃迁，没有虫洞<br>
+你用最笨拙的方式——燃料和引力飞向星空<br>
+在其他游戏里习惯了线性一样的移动后，回过头来看看这个游戏<br>
+它真正代表了人类对太空在历史上的探索</strong></p>
+</blockquote>
+<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/89xvXn"><img src="https://s2.ax1x.com/2020/03/09/89xvXn.jpg" alt="89xvXn.jpg" loading="lazy"></a></figure>
+<p>听说最近出系列2了，如果有机会的话，夏天入手，<strong>112RMB</strong><br>
+学生党伤不起啊……</p>
+<hr>
+<h2 id="中午1230"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">中</mi><mi mathvariant="normal">午</mi><mn>12</mn><mi mathvariant="normal">：</mi><mn>30</mn></mrow><annotation encoding="application/x-tex">中午12：30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">午</span><span class="mord">1</span><span class="mord">2</span><span class="mord cjk_fallback">：</span><span class="mord">3</span><span class="mord">0</span></span></span></span></h2>
+<p>麻婆豆腐香啊，三碗米饭🍛是日常操作。<br>
+写到这里，我觉得我该减肥了😶😶😶<br>
+嗯，从明天开始做一些运动吧……</p>
+<p>不过，现在吃饱了才有力气明天减肥嘛<code>负罪感--</code></p>
+<hr>
+<h2 id="下午1800"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">下</mi><mi mathvariant="normal">午</mi><mn>18</mn><mi mathvariant="normal">：</mi><mn>00</mn></mrow><annotation encoding="application/x-tex">下午18：00</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">下</span><span class="mord cjk_fallback">午</span><span class="mord">1</span><span class="mord">8</span><span class="mord cjk_fallback">：</span><span class="mord">0</span><span class="mord">0</span></span></span></span></h2>
+<p>午觉愣是睡成了下午觉！！！<br>
+打开手机，本想着逛一会B站，但是看了看日历</p>
+<p>今天距离<strong>省选</strong>还有——<strong>20</strong>天啊。</p>
+<p>算了，学习吧。<br>
+<strong>熟悉的洛谷，熟悉的味道</strong></p>
+<h2 id="st表的原理以及实现"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>T</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">原</mi><mi mathvariant="normal">理</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">及</mi><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi></mrow><annotation encoding="application/x-tex">ST表的原理以及实现</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">原</span><span class="mord cjk_fallback">理</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">及</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span></span></span></span></h2>
+<p>今天搞了一下快忘掉的一些数据结构和算法</p>
+<p>众所周知，在维护区间最值的时候，我们常用两种算法，一种叫ST表，一种叫线段树<br>
+这里主要说下<strong>ST表(Sparse Table)</strong></p>
+<p><strong>预处理时间复杂度<code>O(nlogn)</code></strong><br>
+<strong>查询时间复杂度<code>O(1)</code></strong></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">我</mi><mi mathvariant="normal">们</mi><mi mathvariant="normal">首</mi><mi mathvariant="normal">先</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">义</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">初</mi><mi mathvariant="normal">始</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">据</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">和</mi><mi mathvariant="normal">二</mi><mi mathvariant="normal">维</mi><mi mathvariant="normal">的</mi><mi>S</mi><mi>T</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">组</mi></mrow><annotation encoding="application/x-tex">我们首先定义一个初始数据数组和二维的ST表数组</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord cjk_fallback">我</span><span class="mord cjk_fallback">们</span><span class="mord cjk_fallback">首</span><span class="mord cjk_fallback">先</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">初</span><span class="mord cjk_fallback">始</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">据</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">二</span><span class="mord cjk_fallback">维</span><span class="mord cjk_fallback">的</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">组</span></span></span></span></p>
+<pre><code>//n为数据大小
+int a[n]    存初始数据
+
+//21后面具体再解释
+int st[n][21]      存ST表
+</code></pre>
+<p><strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mi mathvariant="normal">表</mi><mi mathvariant="normal">示</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mo>[</mo><mi>i</mi><mo separator="true">,</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mi>j</mi></msup><mo>−</mo><mn>1</mn><mo>]</mo><mi mathvariant="normal">里</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">最</mi><mi mathvariant="normal">大</mi><mi mathvariant="normal">值</mi></mrow><annotation encoding="application/x-tex">st[ i ][ j ]表示的是区间[ i , i+2^j-1 ]里的最大值</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">示</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.907994em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mord cjk_fallback">里</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">最</span><span class="mord cjk_fallback">大</span><span class="mord cjk_fallback">值</span></span></span></span></strong></p>
+<p><strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">所</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">，</mi><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>=</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo>(</mo><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo separator="true">,</mo><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>]</mo><mo>[</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">所以，st[ i ][ j ] = max(st[ i ][ j-1 ] , st[ i+2^{j-1} ][ j-1 ])</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">，</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mclose">)</span></span></span></span></strong></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">这</mi><mi mathvariant="normal">里</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">维</mi><mi mathvariant="normal">护</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mi mathvariant="normal">最</mi><mi mathvariant="normal">大</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">来</mi><mi mathvariant="normal">举</mi><mi mathvariant="normal">例</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">最</mi><mi mathvariant="normal">大</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">最</mi><mi mathvariant="normal">小</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">其</mi><mi mathvariant="normal">实</mi><mi mathvariant="normal">都</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">样</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">只</mi><mi mathvariant="normal">有</mi></mrow><annotation encoding="application/x-tex">这里以维护区间最大值来举例，最大值最小值其实都一样，只有</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">这</span><span class="mord cjk_fallback">里</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">维</span><span class="mord cjk_fallback">护</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mord cjk_fallback">最</span><span class="mord cjk_fallback">大</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">举</span><span class="mord cjk_fallback">例</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">最</span><span class="mord cjk_fallback">大</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">最</span><span class="mord cjk_fallback">小</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">其</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">都</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">只</span><span class="mord cjk_fallback">有</span></span></span></span><strong>max</strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">和</span></span></span></span><strong>min</strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">的</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">别</mi></mrow><annotation encoding="application/x-tex">的区别</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">别</span></span></span></span></p>
+<h3 id="初始化st表"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">初</mi><mi mathvariant="normal">始</mi><mi mathvariant="normal">化</mi><mi>S</mi><mi>T</mi><mi mathvariant="normal">表</mi></mrow><annotation encoding="application/x-tex">初始化ST表</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord cjk_fallback">初</span><span class="mord cjk_fallback">始</span><span class="mord cjk_fallback">化</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord cjk_fallback">表</span></span></span></span></h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">怎</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">来</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">呢</mi><mi mathvariant="normal">？</mi></mrow><annotation encoding="application/x-tex">怎么来的呢？</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">怎</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">呢</span><span class="mord cjk_fallback">？</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">个</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">觉</mi><mi mathvariant="normal">得</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">简</mi><mi mathvariant="normal">单</mi><mi mathvariant="normal">来</mi><mi mathvariant="normal">说</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mstyle mathcolor="red"><mrow><mi mathvariant="normal">二</mi><mi mathvariant="normal">分</mi><mo>+</mo><mi mathvariant="normal">分</mi><mi mathvariant="normal">治</mi></mrow></mstyle><mi mathvariant="normal">的</mi><mi mathvariant="normal">思</mi><mi mathvariant="normal">想</mi></mrow><annotation encoding="application/x-tex">个人觉得，简单来说就是一个{\color{red}{二分+分治}}的思想</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">人</span><span class="mord cjk_fallback">觉</span><span class="mord cjk_fallback">得</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">简</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">说</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord"><span class="mord" style="color:red;"><span class="mord cjk_fallback" style="color:red;">二</span><span class="mord cjk_fallback" style="color:red;">分</span><span class="mspace" style="color:red;margin-right:0.2222222222222222em;"></span><span class="mbin" style="color:red;">+</span><span class="mspace" style="color:red;margin-right:0.2222222222222222em;"></span><span class="mord cjk_fallback" style="color:red;">分</span><span class="mord cjk_fallback" style="color:red;">治</span></span></span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">思</span><span class="mord cjk_fallback">想</span></span></span></span></p>
+<p><strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">我</mi><mi mathvariant="normal">们</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">求</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mo>[</mo><mi>i</mi><mo separator="true">,</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mstyle mathcolor="red"><mi>j</mi></mstyle></msup><mo>−</mo><mn>1</mn><mo>]</mo><mi mathvariant="normal">里</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">最</mi><mi mathvariant="normal">大</mi><mi mathvariant="normal">值</mi></mrow><annotation encoding="application/x-tex">我们要求区间[ i , i+2^{\color{red}{j}}-1 ]里的最大值</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">我</span><span class="mord cjk_fallback">们</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">求</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.907994em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="color:red;"><span class="mord mathdefault mtight" style="margin-right:0.05724em;color:red;">j</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mord cjk_fallback">里</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">最</span><span class="mord cjk_fallback">大</span><span class="mord cjk_fallback">值</span></span></span></span></strong></p>
+<p><strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">先</mi><mi mathvariant="normal">求</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mo>[</mo><mi>i</mi><mo separator="true">,</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mstyle mathcolor="red"><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></mstyle></msup><mo>]</mo><mi mathvariant="normal">和</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mo>[</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mstyle mathcolor="red"><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></mstyle></msup><mo separator="true">,</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mstyle mathcolor="red"><mi>j</mi></mstyle></msup><mo>−</mo><mn>1</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">可以先求区间[ i , i+2^{\color{red}{j-1}} ]和区间[ i+2^{\color{red}{j-1}} , i+2^{\color{red}{j}}-1 ]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">先</span><span class="mord cjk_fallback">求</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="color:red;"><span class="mord mathdefault mtight" style="margin-right:0.05724em;color:red;">j</span><span class="mbin mtight" style="color:red;">−</span><span class="mord mtight" style="color:red;">1</span></span></span></span></span></span></span></span></span></span><span class="mclose">]</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.019104em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="color:red;"><span class="mord mathdefault mtight" style="margin-right:0.05724em;color:red;">j</span><span class="mbin mtight" style="color:red;">−</span><span class="mord mtight" style="color:red;">1</span></span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.907994em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="color:red;"><span class="mord mathdefault mtight" style="margin-right:0.05724em;color:red;">j</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span></strong></p>
+<p><strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">所</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">，</mi><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>=</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo>(</mo><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo separator="true">,</mo><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>]</mo><mo>[</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">所以，st[ i ][ j ] = max(st[ i ][ j-1 ] , st[ i+2^{j-1} ][ j-1 ])</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">，</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mclose">)</span></span></span></span></strong></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">如</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">还</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">理</mi><mi mathvariant="normal">解</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">话</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">再</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">下</mi><mi>s</mi><mi>t</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">含</mi><mi mathvariant="normal">义</mi></mrow><annotation encoding="application/x-tex">如果还是不理解的话，再看一下st数组的含义</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord cjk_fallback">如</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">还</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">理</span><span class="mord cjk_fallback">解</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">话</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">再</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">下</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">含</span><span class="mord cjk_fallback">义</span></span></span></span></p>
+<p><strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mi mathvariant="normal">表</mi><mi mathvariant="normal">示</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mstyle mathcolor="red"><mrow><mo>[</mo><mi>i</mi><mo separator="true">,</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mi>j</mi></msup><mo>−</mo><mn>1</mn><mo>]</mo></mrow></mstyle><mi mathvariant="normal">里</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">最</mi><mi mathvariant="normal">大</mi><mi mathvariant="normal">值</mi></mrow><annotation encoding="application/x-tex">st[ i ][ j ]表示的是区间{\color{red}{[ i , i+2^j-1 ]}}里的最大值</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">示</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mord"><span class="mord" style="color:red;"><span class="mopen" style="color:red;">[</span><span class="mord mathdefault" style="color:red;">i</span><span class="mpunct" style="color:red;">,</span><span class="mspace" style="color:red;margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="color:red;">i</span><span class="mspace" style="color:red;margin-right:0.2222222222222222em;"></span><span class="mbin" style="color:red;">+</span><span class="mspace" style="color:red;margin-right:0.2222222222222222em;"></span><span class="mord" style="color:red;"><span class="mord" style="color:red;">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight" style="color:red;"><span class="mord mathdefault mtight" style="margin-right:0.05724em;color:red;">j</span></span></span></span></span></span></span></span><span class="mspace" style="color:red;margin-right:0.2222222222222222em;"></span><span class="mbin" style="color:red;">−</span><span class="mspace" style="color:red;margin-right:0.2222222222222222em;"></span><span class="mord" style="color:red;">1</span><span class="mclose" style="color:red;">]</span></span></span><span class="mord cjk_fallback">里</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">最</span><span class="mord cjk_fallback">大</span><span class="mord cjk_fallback">值</span></span></span></span></strong></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">初</mi><mi mathvariant="normal">始</mi><mi mathvariant="normal">化</mi><mi mathvariant="normal">最</mi><mi mathvariant="normal">小</mi><mi mathvariant="normal">单</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">也</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mo>[</mo><mi>i</mi><mo separator="true">,</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mn>0</mn></msup><mo>−</mo><mn>1</mn><mo>]</mo><mi mathvariant="normal">，</mi><mi mathvariant="normal">也</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">是</mi><mo>[</mo><mi>i</mi><mo separator="true">,</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">初始化最小单元，也就是区间[i,i+2^0-1] ，也就是[i,i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">初</span><span class="mord cjk_fallback">始</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">最</span><span class="mord cjk_fallback">小</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">也</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">也</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">是</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span></p>
+<pre><code class="language-cpp">for(int i=1;i&lt;=n;i++)
+    st[i][0]=a[i];
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">初</mi><mi mathvariant="normal">始</mi><mi mathvariant="normal">化</mi><mi mathvariant="normal">剩</mi><mi mathvariant="normal">余</mi><mi mathvariant="normal">部</mi><mi mathvariant="normal">分</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">这</mi><mi mathvariant="normal">里</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">了</mi><mi mathvariant="normal">位</mi><mi mathvariant="normal">运</mi><mi mathvariant="normal">算</mi><mi mathvariant="normal">节</mi><mi mathvariant="normal">约</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">间</mi><mi mathvariant="normal">开</mi><mi mathvariant="normal">销</mi></mrow><annotation encoding="application/x-tex">初始化剩余部分，这里用到了位运算节约时间开销</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">初</span><span class="mord cjk_fallback">始</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">剩</span><span class="mord cjk_fallback">余</span><span class="mord cjk_fallback">部</span><span class="mord cjk_fallback">分</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">这</span><span class="mord cjk_fallback">里</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">了</span><span class="mord cjk_fallback">位</span><span class="mord cjk_fallback">运</span><span class="mord cjk_fallback">算</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">约</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">间</span><span class="mord cjk_fallback">开</span><span class="mord cjk_fallback">销</span></span></span></span></p>
+<pre><code class="language-cpp">for(int j=1;(1&lt;&lt;j)&lt;=n;j++)
+    for(int i=0;i+(1&lt;&lt;j)&lt;=n;i++)
+        st[i][j] = max(st[i][j-1],st[i+(1&lt;&lt;(j-1))][j-1]);
+</code></pre>
+<h3 id="查询st表">查询ST表</h3>
+<p>ST表的查询许多萌新上来会迷惑的一个操作</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">比</mi><mi mathvariant="normal">如</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">我</mi><mi mathvariant="normal">们</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">查</mi><mi mathvariant="normal">询</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">比如，我们要查询区间[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">比</span><span class="mord cjk_fallback">如</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">我</span><span class="mord cjk_fallback">们</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">查</span><span class="mord cjk_fallback">询</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">如</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">这</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mi mathvariant="normal">恰</mi><mi mathvariant="normal">好</mi><mi mathvariant="normal">是</mi><mi>S</mi><mi>T</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">里</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mo>[</mo><mi>i</mi><mo separator="true">,</mo><mi>i</mi><mo>+</mo><msup><mn>2</mn><mi>j</mi></msup><mo>−</mo><mn>1</mn><mo>]</mo><mi mathvariant="normal">，</mi><mi mathvariant="normal">那</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">我</mi><mi mathvariant="normal">们</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">直</mi><mi mathvariant="normal">接</mi><mi mathvariant="normal">访</mi><mi mathvariant="normal">问</mi><mi>s</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">如果这个区间恰好是ST表里的一个区间[ i , i+2^j-1 ]，那么我们就可以直接访问st[i][j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">如</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">这</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mord cjk_fallback">恰</span><span class="mord cjk_fallback">好</span><span class="mord cjk_fallback">是</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">里</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.907994em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">那</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">我</span><span class="mord cjk_fallback">们</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">直</span><span class="mord cjk_fallback">接</span><span class="mord cjk_fallback">访</span><span class="mord cjk_fallback">问</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">可</mi><mi mathvariant="normal">惜</mi><mi mathvariant="normal">大</mi><mi mathvariant="normal">多</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">候</mi><mi mathvariant="normal">都</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">那</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">我</mi><mi mathvariant="normal">们</mi><mi mathvariant="normal">怎</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">做</mi><mi mathvariant="normal">呢</mi><mi mathvariant="normal">？</mi><mi mathvariant="normal">我</mi><mi mathvariant="normal">们</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">这</mi><mi mathvariant="normal">样</mi><mi mathvariant="normal">做</mi></mrow><annotation encoding="application/x-tex">可惜大多时候都不是，那么我们怎么做呢？我们可以这样做</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">惜</span><span class="mord cjk_fallback">大</span><span class="mord cjk_fallback">多</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">候</span><span class="mord cjk_fallback">都</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">那</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">我</span><span class="mord cjk_fallback">们</span><span class="mord cjk_fallback">怎</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">做</span><span class="mord cjk_fallback">呢</span><span class="mord cjk_fallback">？</span><span class="mord cjk_fallback">我</span><span class="mord cjk_fallback">们</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">这</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">做</span></span></span></span></p>
+<pre><code class="language-cpp">int k = log(r-l+1)/log(2));
+int ans = max(st[l][k],st[y-(1&lt;&lt;k)+1][k]);
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>]</mo><mi mathvariant="normal">长</mi><mi mathvariant="normal">度</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">向</mi><mi mathvariant="normal">下</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">整</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">值</mi></mrow><annotation encoding="application/x-tex">k是区间[l,r]长度取对数向下取整的值</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span><span class="mord cjk_fallback">长</span><span class="mord cjk_fallback">度</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">向</span><span class="mord cjk_fallback">下</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">整</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">值</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">最</mi><mi mathvariant="normal">后</mi><mi mathvariant="normal">比</mi><mi mathvariant="normal">较</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">两</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">间</mi><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mi>l</mi><mo>+</mo><msup><mn>2</mn><mi>k</mi></msup><mo>]</mo><mi mathvariant="normal">和</mi><mo>[</mo><mi>r</mi><mo>−</mo><msup><mn>2</mn><mi>k</mi></msup><mo separator="true">,</mo><mi>r</mi><mo>]</mo><mi mathvariant="normal">有</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">能</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">重</mi><mi mathvariant="normal">合</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">但</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">答</mi><mi mathvariant="normal">案</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">唯</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">的</mi></mrow><annotation encoding="application/x-tex">最后比较的两个区间[l,l+2^k]和[r-2^k,r]有可能是重合的，但是答案是唯一的</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">最</span><span class="mord cjk_fallback">后</span><span class="mord cjk_fallback">比</span><span class="mord cjk_fallback">较</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">两</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">间</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.099108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span><span class="mclose">]</span><span class="mord cjk_fallback">和</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.099108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">能</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">重</span><span class="mord cjk_fallback">合</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">但</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">答</span><span class="mord cjk_fallback">案</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">唯</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">的</span></span></span></span></p>
+<p><s><strong>板子还是要自己打，不然怎么才能背会呢？</strong></s></p>
+<h2 id="晚上2230"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">晚</mi><mi mathvariant="normal">上</mi><mn>22</mn><mi mathvariant="normal">：</mi><mn>30</mn></mrow><annotation encoding="application/x-tex">晚上22：30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">晚</span><span class="mord cjk_fallback">上</span><span class="mord">2</span><span class="mord">2</span><span class="mord cjk_fallback">：</span><span class="mord">3</span><span class="mord">0</span></span></span></span></h2>
+<p>刷题的日子总是这么朴实无华且枯燥</p>
+<p>写完博客，一看表居然已经12点了</p>
+<p>看来我还是太菜，一篇杂记类博客居然要写一个半小时。</p>
+<p>今天AK洛谷第一页黄题，明天继续肝吧，绿题蓝题要提上日程了</p>
+<p>之前有位大佬建议我刷满2页蓝，……太犇了。</p>
+<p>继续加油吧，不忘初心</p>
+<p>附上小鸟和天音前辈</p>
+<figure data-type="image" tabindex="2"><a href="https://imgchr.com/i/8CnRVU"><img src="https://s2.ax1x.com/2020/03/10/8CnRVU.jpg" alt="8CnRVU.jpg" loading="lazy"></a></figure>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Histone&#39;s OI
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://YangMoBy.github.io/za-ji-20200309/" title="【杂记】2020.03.09">【杂记】2020.03.09</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://YangMoBy.github.io/Ls2APi95n/"># 杂记</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="【杂记】2020.03.08" href="https://YangMoBy.github.io/za-ji-20200308/">【杂记】2020.03.08</a>
+        <a class="nav-mobile-next" title="【杂记】2020.03.08" href="https://YangMoBy.github.io/za-ji-20200308/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+              
+                
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By HsxyHao
+    </div>
+    <div class="poweredby">
+      当世界吵吵闹闹，只有你自己才能听清内心的声音
+    </div>
+  </footer>
+  
+  
+  <div class="pisces back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+    <div class="bg-img">
+      <img src="\media\images\custom-bgImg.jpg" />
+    </div>
+  
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+</script>
+    </div>
+  </body>
+  <script src="/media/js/motion.js"></script>
+</html>
